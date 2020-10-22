@@ -2,19 +2,35 @@
     box-sizing: border-box;
 }
 
+:root {
+    --blue: #07498b;
+    --black: #293133;
+    --black: #111010;
+    --grey: #767676;
+    /* --grey: #5c5c5c; */
+    --light-grey: #949494;
+    --lighter-grey: #d8d8d8;
+    --sepia:  #faf3e3;
+
+    --googleFont: '{{ .Site.Params.googleFont -}}';
+
+    --content-font-size: 1.8em;
+    --content-line-height: 1.8em;
+
+}
+
 html {
     font-size: 62.5%;
+    background-color: var(--sepia);
 }
 
 body {
-    font-size: 16px;
-    font-size: 1.6rem;
-    font-family: 'Helvetica Neue', 'Arial', sans-serif;
-    color: #313a3d;
+    font-size: var(--content-font-size);
+    font-family: var(--googleFont), 'Arial', sans-serif;
     width: 100%;
     margin: 0 auto;
     padding: 0 16px;
-    line-height: 1.6;
+    line-height: 1.6em;
 }
 
 header#banner {
@@ -22,7 +38,6 @@ header#banner {
 }
 
 header#banner a {
-    color: #313a3d;
     text-decoration: none;
 }
 
@@ -37,8 +52,13 @@ header#banner h2 {
     margin: 0 8px 0 0;
 }
 
+header#banner h2 a {
+    color: var(--blue); /* Rahul Prabhakar dark blue color */
+}
+
 header#banner nav {
     display: inline-block;
+    float: right;
 }
 
 header#banner nav ul {
@@ -55,11 +75,11 @@ header#banner nav ul li {
 }
 
 header#banner nav ul li a {
-    color: #454545;
+    color: var(--blue); /* Nav menu colors */
 }
 
 main#content a {
-    color: #007dfa;
+    color: var(--blue);
     text-decoration: none;
 }
 
@@ -91,15 +111,17 @@ main#content h6 + p {
     margin-top: 5px;
 }
 
-main#content p {
-    color: #394548;
+main#content p { /* page text content */
+    color: var(--black);
     margin: 16px 0;
+    line-height: var(--content-line-height);
+    word-break: break-word;
 }
 
-main#content hr {
+main#content hr { /* page end divider */
     height: 1px;
     border: 0;
-    background: #d8d8d8;
+    background: var(--lighter-grey);
 }
 
 /* index.html styles */
@@ -127,7 +149,7 @@ main#content ul#posts li a {
 }
 
 main#content ul#posts li a:hover {
-    color: #369aff;
+    text-decoration: underline;
 }
 
 main#content ul#posts li a:hover small {
@@ -137,16 +159,17 @@ main#content ul#posts li a:hover small {
 /* single.html styles */
 main#content header#post-header h1 {
     display: block;
+    color: var(--black); /* Article header color */ 
     font-size: 23px;
     font-size: 2.3rem;
     line-height: 1.15;
 }
 
-main#content header#post-header time {
+/* main#content header#post-header time {
     display: block;
     font-size: 0.85em;
-    color: #767676;
-}
+    color: var(--black);
+} */
 
 main#content #toc {
     border: 1px solid #b1b1b1;
@@ -262,6 +285,6 @@ footer#footer {
     font-size: 14px;
     font-size: 1.4rem;
     font-weight: 300;
-    color: #949494;
+    color: var(--light-grey);
     margin: 40px 0;
 }
