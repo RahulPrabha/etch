@@ -24,13 +24,29 @@ html {
     background-color: var(--sepia);
 }
 
-body {
+body#wrapper {
+    display: grid;
+    grid-template-columns: 
+        1fr
+        min(65ch, 100%)
+        1fr;
     font-size: var(--content-font-size);
     font-family: var(--googleFont), 'Arial', sans-serif;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 16px;
     line-height: 1.6em;
+    margin: 8px;
+}
+
+body#wrapper > * {
+    grid-column: 2;
+}
+
+body#wrapper > .fullBleed {
+    width: 100%;
+    grid-column: 1 / -1;
+ }
+
+header#banner {
+    margin: 25px 0;
 }
 
 header#banner {
@@ -58,7 +74,7 @@ header#banner h2 a {
 
 header#banner nav {
     display: inline-block;
-    float: right;
+    float: right;    
 }
 
 header#banner nav ul {
@@ -127,8 +143,7 @@ main#content hr { /* page end divider */
 /* index.html styles */
 main#content ul#posts {
     list-style-type: none;
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-top: 0;
     padding: 0;
 }
