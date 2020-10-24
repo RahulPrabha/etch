@@ -7,7 +7,6 @@
     --black: #293133;
     --black: #111010;
     --grey: #767676;
-    /* --grey: #5c5c5c; */
     --light-grey: #949494;
     --lighter-grey: #d8d8d8;
     --sepia:  #faf3e3;
@@ -22,6 +21,9 @@
 html {
     font-size: 62.5%;
     background-color: var(--sepia);
+
+    /* Prevents scroll bar from horizontally shifting content (https://stackoverflow.com/a/30293718/5034389) */
+    padding-left: calc(100vw - 100%);
 }
 
 body#wrapper {
