@@ -1,4 +1,4 @@
-{{ if not (eq .Site.Params.dark "on") -}}
+{{ if eq .Site.Params.dark "on" -}}
 @media (prefers-color-scheme: dark) {
 {{ end -}}
 html {
