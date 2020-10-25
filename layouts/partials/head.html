@@ -4,7 +4,12 @@
     {{ with .Site.Params.description -}}
     <meta name="description" content="{{ . }}">
     {{ end }}
-    {{ printf `<link rel="shortcut icon" href="%s">` ("favicon.ico" | relURL) | safeHTML }}
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     {{ with .OutputFormats.Get "rss" -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
     {{ end -}}
@@ -24,6 +29,6 @@
 
     {{ $css := $resources | resources.Concat "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . | minify }}
     {{ printf `<link rel="stylesheet" href="%s">` $css.RelPermalink | safeHTML }}
-    <link href='https://fonts.googleapis.com/css?family={{ .Site.Params.googleFont -}}' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family={{ .Site.Params.googleFont -}}:300,400,600,700,800' rel='stylesheet'>
     <title>{{ .Title }}</title>
 </head>

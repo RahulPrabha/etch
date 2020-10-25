@@ -13,8 +13,8 @@
 
     --googleFont: '{{ .Site.Params.googleFont -}}';
 
-    --content-font-size: 1.8em;
-    --content-line-height: 1.8em;
+    --content-font-size: 1.9em;
+    --content-line-height: 1.9em;
 
 }
 
@@ -33,7 +33,7 @@ body#wrapper {
         min(65ch, 100%)
         1fr;
     font-size: var(--content-font-size);
-    font-family: var(--googleFont), 'Arial', sans-serif;
+    font-family: var(--googleFont), 'Verdana', sans-serif;
     line-height: 1.6em;
     margin: 8px;
 }
@@ -231,6 +231,11 @@ main#content #toc ol li {
 main#content #toc ol li:before {
     content: counters(item, ".") ". ";
     counter-increment: item;
+}
+
+main#content audio {
+    margin: 8px 0 0 -3px;
+    width: 400px;
 }
 
 main#content img {
