@@ -19,7 +19,7 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 60%;
     background-color: var(--sepia);
 
     /* Prevents scroll bar from horizontally shifting content (https://stackoverflow.com/a/30293718/5034389) */
@@ -30,10 +30,11 @@ body#wrapper {
     display: grid;
     grid-template-columns: 
         1fr
-        min(65ch, 100%)
+        min(55ch, 100%)
         1fr;
     font-size: var(--content-font-size);
     font-family: var(--googleFont), 'Verdana', sans-serif;
+    text-rendering: optimizeLegibility;
     line-height: 1.6em;
     margin: 8px;
 }
