@@ -287,6 +287,15 @@ main#content code {
     padding: 0 5px;
 }
 
+main#content blockquote {
+    display: block;
+    border-left: solid 1px var(--lighter-grey);
+    padding: 0 .75em 0 1em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+}
+
 main#content pre {
     display: block;
     overflow-x: auto;
