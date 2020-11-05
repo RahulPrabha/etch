@@ -18,6 +18,25 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+
+    {{ if .IsPage }}
+        <!-- Facebook Fun -->
+        <meta property="og:title" content="{{ .Title }}">
+        <meta property="og:url" content="{{ .Permalink }}">
+        <meta property="og:site_name" content="Oldmanrahul">
+        <meta property="og:image" content="{{ "images/oldmanrahul_menu_icon.jpg" | relURL }}">
+        <meta name="og:description" content="{{ .Description }}">
+        <meta property="og:type" content="article">
+        <!-- Twitter Fun -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="{{ .Title }}">
+        <meta name="twitter:description" content="{{ .Description }}">
+        <meta name="twitter:site" content="@oldmanrahul">
+        <meta name="twitter:creator" content="@oldmanrahul">
+        <meta property="twitter:url" content="{{ .Permalink }}">
+        <meta name="twitter:image" content="{{ "images/oldmanrahul_menu_icon.jpg" | relURL }}">
+    {{ end }}
+
     {{ with .OutputFormats.Get "rss" -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
     {{ end -}}
