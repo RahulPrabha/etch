@@ -118,6 +118,10 @@ main#content h6 {
     font-weight: 400;
 }
 
+main#content h2 {
+    padding: 1.4em 0 1.4em 0;
+}
+
 main#content h1 + p,
 main#content h2 + p,
 main#content h3 + p,
