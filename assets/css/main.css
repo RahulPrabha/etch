@@ -50,10 +50,9 @@ body#wrapper > .fullBleed {
 
 header#banner {
     margin: 25px 0;
-}
-
-header#banner {
-    margin: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header#banner a {
@@ -65,21 +64,23 @@ header#banner a:hover {
 }
 
 header#banner #home {
+    font-family: var(--headingFont), sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--black);
+    display: inline-flex;
+    align-items: center;
+}
+
+header#banner #home .home-icon {
     border-radius: 50%;
-    height: 2.5em;
+    height: 1.2em;
+    width: 1.2em;
     border: solid 2px var(--blue);
-
-    -ms-transform: translateY(10%);
-    transform: translateY(10%);
-
+    margin-right: 1px;
 }
 
 header#banner nav {
-    display: inline-block;
-    float: right;
-    -ms-transform: translateY(50%);
-    transform: translateY(50%);
-
 }
 
 header#banner nav ul {
