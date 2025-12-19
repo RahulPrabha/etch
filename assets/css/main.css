@@ -12,6 +12,7 @@
     --sepia:  #faf3e3;
 
     --googleFont: '{{ .Site.Params.googleFont -}}';
+    --headingFont: '{{ .Site.Params.headingFont | default "Space Grotesk" -}}';
 
     --content-font-size: 1.8em;
     --content-line-height: 1.9em;
@@ -95,6 +96,7 @@ header#banner nav ul li {
 
 header#banner nav ul li a {
     color: var(--blue); /* Nav menu colors */
+    font-family: var(--headingFont), sans-serif;
 }
 
 main#content a {
@@ -114,7 +116,8 @@ main#content h5,
 main#content h6 {
     margin-bottom: 0;
     line-height: 1.15;
-    font-weight: 400;
+    font-weight: 500;
+    font-family: var(--headingFont), sans-serif;
 }
 
 main#content h2 {
@@ -164,6 +167,7 @@ main#content ul#posts small {
 
 main#content ul#posts li a {
     text-decoration: none;
+    font-family: var(--headingFont), sans-serif;
 }
 
 main#content ul#posts li a:hover {

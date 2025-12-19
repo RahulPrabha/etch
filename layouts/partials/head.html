@@ -56,6 +56,6 @@
 
     {{ $css := $resources | resources.Concat "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . | minify }}
     {{ printf `<link rel="stylesheet" href="%s">` $css.RelPermalink | safeHTML }}
-    <link href='https://fonts.googleapis.com/css?family={{ .Site.Params.googleFont -}}:400,600,700,800,300italic' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family={{ .Site.Params.googleFont -}}:ital,wght@0,400;0,600;0,700;1,400&family={{ .Site.Params.headingFont | default "Space Grotesk" -}}:wght@400;500;600;700&display=swap' rel='stylesheet'>
     <title>{{ .Title }}</title>
 </head>
