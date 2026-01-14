@@ -144,6 +144,26 @@ main#content p { /* page text content */
     word-break: break-word;
 }
 
+/* Illuminated initials / drop caps */
+main#content .dropcap-paragraph {
+    margin: 16px 0;
+}
+
+main#content .dropcap {
+    float: left;
+    font-size: 6em;
+    line-height: 1;
+    margin: 0.07em 0.1em 0 0;
+    color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1em;
+    height: 1em;
+    display: block;
+    vertical-align: top;
+}
+
 main#content hr { /* page end divider */
     height: 1px;
     border: 0;
