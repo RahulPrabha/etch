@@ -14,7 +14,7 @@
     --googleFont: '{{ .Site.Params.googleFont -}}';
     --headingFont: '{{ .Site.Params.headingFont | default "Space Grotesk" -}}';
 
-    --content-font-size: 1.5em;
+    --content-font-size: 2em;
     --content-line-height: 1.9em;
 }
 
@@ -98,6 +98,7 @@ header#banner nav ul li {
 header#banner nav ul li a {
     color: var(--blue); /* Nav menu colors */
     font-family: var(--headingFont), sans-serif;
+    display: inline-block;
 }
 
 main#content a {
